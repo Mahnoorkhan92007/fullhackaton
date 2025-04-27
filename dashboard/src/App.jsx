@@ -12,12 +12,12 @@ function App() {
     <TaskProvider>
       <Router>
         <Routes>
-          {/* Default route will show Signup if the user is not logged in */}
+          {/* Signup page as the default route */}
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<Login />} />
 
-          {/* Redirect to TaskBoard if logged in, otherwise Signup */}
-          <Route path="/" element={isLoggedIn ? <TaskBoard /> : <Signup />} />
+          {/* Redirect to login if user is not logged in */}
+          <Route path="/" element={<Navigate to="/signup" />} />
 
           {/* TaskBoard route is protected, user must be logged in */}
           <Route path="/taskboard" element={isLoggedIn ? <TaskBoard /> : <Navigate to="/login" />} />

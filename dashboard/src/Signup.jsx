@@ -57,7 +57,7 @@ function Signup() {
       } else {
         alert('There was an error during signup. Please try again.');
       }
-      console.log("Sending data:", { email, password });
+  
 
     }
   };
