@@ -1,0 +1,132 @@
+/* Body styling to center content */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height of the viewport */
+    margin: 0;
+    background-color: #f0f0f0; /* Set the entire page background to light blue */
+    font-family: 'Roboto', sans-serif; /* Use Roboto font */
+}
+
+/* Form container */
+form {
+    width: 100%;
+    max-width: 400px; /* Form width */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Darker shadow */
+    background-color: #fff;
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+    box-sizing: border-box;
+    text-align: left;
+    font-family: 'Roboto', sans-serif; /* Use Roboto font */
+}
+
+/* Input fields */
+input {
+    width: 100%;
+    max-width: 100%;
+    padding: 12px;
+    margin: 12px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-out forwards;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    position: relative; /* Make the input relative to position the eye icon */
+}
+
+/* Focus effect on input fields */
+input:focus {
+    border-color: purple; /* Change the border color to purple when focused */
+    outline: none; /* Remove the default outline */
+    box-shadow: 0 0 6px purple; /* Add a purple glow around the input field */
+}
+
+/* Button styling */
+button {
+    background-color: purple !important;
+    color: white;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards 0.2s;
+    padding: 14px;
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 5px;
+    background-color: #6a4c92;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: darkviolet !important;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Link styling for paragraph */
+p {
+    text-align: center; /* Center the text */
+    font-size: 14px;
+    opacity: 0;
+    animation: fadeInUp 1s ease-out forwards 1.5s;
+    margin-top: 20px;
+    font-family: 'Roboto', sans-serif; /* Use Roboto font */
+}
+
+/* Link */
+a {
+    color: purple;
+    text-decoration: none;
+}
+
+/* Link hover */
+a:hover {
+    text-decoration: underline;
+}
+
+/* Eye Icon styling */
+.eye-icon {
+    position: absolute;
+    right: 10px; /* Right align the icon inside the input field */
+    top: 50%; /* Vertically center the icon */
+    transform: translateY(-50%); /* Adjust for perfect centering */
+    cursor: pointer;
+    color: #6c757d;
+    font-size: 18px;
+}
+
+.signup {
+    text-align: center;
+    color: purple;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
